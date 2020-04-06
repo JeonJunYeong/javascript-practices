@@ -1,11 +1,26 @@
 
-var s1 = "hello1";
-s1.myFunction();
-
-String.prototype.myFunction=functino(){
-	console.log("mystring"+this);
+var o = {
+	name : '마이콜',
+	age : 20
+	
 }
 
-var s2 = "hello2";
 
-s2.myFunction();
+console.log(o.hasOwnProperty("name"));
+console.log(o.hasOwnProperty("age"));
+console.log(o.hasOwnProperty("email"));
+
+
+console.log("=================with()===============");
+
+with(o){
+console.log(name+":"+age);
+}
+console.log("=================for ~ in===============");
+
+var data = "";
+for(var property in o){
+if(typeof(o[property]))
+console.log(property);
+}
+console.log(data);
